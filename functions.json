@@ -1,0 +1,40 @@
+{
+    "functions": [
+        {
+            "type": "function",
+            "function": {
+                "name": "acknowledge_incident",
+                "description": "Acknowledge the incident in PagerDuty to prevent further notifications and inform the team that the issue is being addressed.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "incident_id": {
+                            "type": "string",
+                            "description": "The ID of the incident to acknowledge."
+                        }
+                    },
+                    "required": ["incident_id"],
+                    "additionalProperties": false
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "check_incident_details",
+                "description": "Retrieve detailed information about the incident from PagerDuty, including the affected services and any relevant logs.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "incident_id": {
+                            "type": "string",
+                            "description": "The ID of the incident to retrieve details for."
+                        }
+                    },
+                    "required": ["incident_id"],
+                    "additionalProperties": false
+                }
+            }
+        }
+    ]
+}
